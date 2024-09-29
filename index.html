@@ -11,11 +11,18 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <header>
-      <img src="/logo-favicon.png" alt="company logo" />
+      <section class="navbar">
+        <img class="logo" src="/logo-favicon.png" alt="company logo" />
       <nav>
         <ul class="nav-list">
           <li class="nav-item"><a href="index.html">Home</a></li>
@@ -24,36 +31,44 @@
           <li class="nav-item"><a href="/pages/contact.html">Contact</a></li>
         </ul>
       </nav>
-      <section class="hero-banner">
-        <img src="./assets/images/banner.jpg" alt="banner" class="banner-bg"/>
-        <img src="./assets/images/sec.png" alt="banner text" class="banner-text"/>
       </section>
-
+      
+      <section class="hero-banner">
+        <!-- <img src="./assets/images/banner.jpg" alt="banner" class="banner-bg" /> -->
+        <img
+          src="./assets/images/sec.png"
+          alt="banner text"
+          class="banner-text"
+        />
+      </section>
     </header>
     <main>
-        <section id="about">
-            <h1 class="title">About</h1>
-            <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, explicabo.</p>
+      <section id="about">
+        <h1 class="title">About</h1>
+        <p class="about-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+          explicabo.
+        </p>
+      </section>
+      <section id="servives">
+        <h1>Our Services</h1>
+        <section class="card-container">
+          <!-- add service cards -->
         </section>
-        <section id="servives">
-          <h1>Our Services</h1>
-          <section class="card-container">
-            <!-- add service cards -->
-          </section>
+      </section>
+      <section id="reviews">
+        <h1 class="title">Customer Reviews</h1>
+        <section class="reviews-container">
+          <!-- add review cards -->
         </section>
-        <section id="reviews">
-          <h1 class="title">Customer Reviews</h1>
-          <section class="reviews-container">
-            <!-- add review cards -->
-          </section>
-        </section>
-        <section id="contact">
-            <h1 class="title">Contact us</h1>
-            <!-- add contact form here -->
-        </section>    
+      </section>
+      <section id="contact">
+        <h1 class="title">Contact us</h1>
+        <!-- add contact form here -->
+      </section>
     </main>
     <footer>
-        <!-- add footer here -->
+     <h1>footer here</h1>
     </footer>
   </body>
 </html>

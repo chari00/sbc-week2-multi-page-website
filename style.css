@@ -27,3 +27,28 @@ main {
 }
 
 /* ------>home page layout ENDS here<-------- */
+
+/* -------->styles for HEADER and NAV STARTS here<-------- */
+header{
+    display: flex;
+    flex-direction: column;
+    background-image: url('./assets/images/banner.jpg');
+    background-size: cover;
+    height: 100%;
+  }
+ 
+h1 {
+  color: var(--header-color);
+  font-weight: var(--header-font-weight);
+}
+
+/*add media queries for web responsiveness to different viewport */
+
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-areas: ; */
+  }
+}
