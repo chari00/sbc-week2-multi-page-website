@@ -1,0 +1,29 @@
+/* ------>home page layout STARTS here<-------- */
+
+/* set global variables */
+:root {
+  --header-font-weight: 800;
+  --header-color: rgba(48, 114, 236, 0.974);
+}
+/* remove html and body default sizes, 
+and assign global properties */
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  min-width: 300px;
+}
+/* set body layout */
+body {
+  display: grid;
+}
+/* /set the main layout */
+main {
+  display: grid;
+}
+
+/* ------>home page layout ENDS here<-------- */
