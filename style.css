@@ -65,6 +65,60 @@ nav{
 
 
 
+
+
+
+/* ----------->CSS styles for CONTACT page<-------- */
+
+#contact>.title{
+ text-align: center;
+ margin-top: 20px;
+ margin-bottom: 10px;
+}
+#contact {
+  padding: 0 15px 0 15px;
+}
+label[for="email"]::before{
+  content: '📩 ';
+}
+
+label[for="message"]::before{
+  content: '✍️ ';
+}
+label[for="phone"]::before{
+  content: '📞 ';
+}
+#message{
+  resize: none;
+}
+
+
+.btn {
+  background-color: #2a8bec;
+  border: solid 2px #2a8bec;
+  border-radius: 5px;
+  color: whitesmoke;
+  padding: 5px;
+  margin: 10px 0 10px 0;
+  box-shadow: 2px 3px 5px 1px #4ec7ec;
+}
+
+/* hover effects */
+.btn:hover {
+  background-color: darkorange;
+  box-shadow: 2px 3px 5px 1px darkorange;
+  border: solid 2px darkorange;
+
+
+}
+
+
+
+
+
+
+
+
 /*add media queries for web responsiveness to different viewport */
 
 @media (min-width: 768px) {
