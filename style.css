@@ -31,16 +31,39 @@ main {
 /* -------->styles for HEADER and NAV STARTS here<-------- */
 header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-image: url('./assets/images/banner.jpg');
     background-size: cover;
-    height: 100%;
+    /* height: 100%; */
   }
  
 h1 {
   color: var(--header-color);
   font-weight: var(--header-font-weight);
 }
+
+nav{
+  display: flex;
+  background-color: rgb(215, 22, 22);
+  height: 60px;
+  z-index: 10;
+}
+.nav-item{
+  width: 20px;
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  /* flex-wrap: nowrap; */
+  /* justify-content: space-evenly; */
+  align-items: center;
+  /* width: 100px; */
+  /* margin: 20px; */
+}
+
+
 
 /*add media queries for web responsiveness to different viewport */
 
