@@ -51,7 +51,7 @@ h1 {
 /* ------>home page layout ENDS here<-------- */
 
 
-/* -------> burgerMenu START <------- */
+/* -------> burgerMenu START ⬇️⬇️⬇️⬇️<------- */
 .hamburger-menu {
   --x-width: calc(var(--hamburger-height) * 1.41421356237);
   display: flex;
@@ -138,10 +138,10 @@ h1 {
 .burgerMenu .hamburger-menu:has(input:checked) + .sidebar{
   background-color: var(--background);
 }
-/* -------> burgerMenu END <------- */
+/* -------> burgerMenu END ⬆️⬆️⬆️⬆️ <------- */
 
 
-/* -------->styles for HEADER and NAV STARTS here<-------- */
+/* -------->styles for HEADER and NAV STARTS here ⬇️⬇️⬇️⬇️<-------- */
 header {
   display: flex;
   flex-direction: row;
@@ -161,13 +161,13 @@ header {
   height: 70px;
   justify-content: space-around;
   background-color: whitesmoke;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .cname {
   position: absolute;
-  font-weight: 600;
-  font-size: 1.2rem;
-  padding: 10px;
+  font-weight: 900;
+  font-size: 0.8rem;
+  padding: 15px;
   margin-left: 45px;
   margin-bottom: 0;
 }
@@ -231,16 +231,54 @@ header {
   list-style: none;
   align-items: center;
 }
+.contact-item-email::before{
+  content: '📩';
+}
+.contact-item-phone::before{
+  content: '📞';
+}
+
+/* -------->styles for HEADER and NAV ENDS here ⬆️⬆️⬆️⬆️<-------- */
+
+/* -------->styles for ABOUT page STARTS here ⬇️⬇️⬇️⬇️<-------- */
+#about>.about-text{
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  text-indent: 0;
+}
+#about>.title{
+  display: none;
+}
+#about>h2{
+  text-align: center;
+  margin-top: 20px;
+}
+#about>p{
+  text-indent: 40px;
+  text-align: justify;
+  padding: 10px;
+
+}
+
+/* -------->styles for ABOUT page ENDS here ⬆️⬆️⬆️⬆️<-------- */
+
+/* ----------->CSS styles for SERVICES page STARTS here ⬇️⬇️⬇️⬇️<-------- */
 
 
 
-/* ----------->CSS styles for CONTACT page<-------- */
+
+/* -------->styles for ABOUT page ENDS here ⬆️⬆️⬆️⬆️<-------- */
+
+
+/* ----------->CSS styles for CONTACT page ⬇️⬇️⬇️⬇️<-------- */
 
 #contact {
   display: flex;
   padding: 0 15px 0 15px;
   flex-wrap: nowrap;
   flex-direction: column;
+  z-index: 10;
 }
 #contact > .title {
   text-align: center;
@@ -277,6 +315,9 @@ label[for="phone"]::before {
   box-shadow: 2px 3px 5px 1px var(--btn-hover);
   border: solid 2px var(--btn-hover);
 }
+/* ----------->CSS styles for CONTACT page ⬆️⬆️⬆️⬆️<-------- */
+
+
 
 /*add media queries for web responsiveness to different viewport */
 
