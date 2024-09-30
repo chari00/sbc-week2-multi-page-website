@@ -3,7 +3,10 @@
 /* set global variables */
 :root {
   --header-font-weight: 800;
+
   --header-color: rgba(48, 114, 236, 0.974);
+  --font-color:rgb(2, 2, 105);
+
 }
 /* remove html and body default sizes, 
 and assign global properties */
@@ -16,6 +19,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   width: 100%;
+  color:var(--font-color) ;
 }
 /* set body layout */
 body {
@@ -39,17 +43,79 @@ header {
   flex-direction: row;
   background-image: url("./assets/images/banner.jpg");
   background-size: cover;
-  /* height: 100%; */
+  position: relative;
+  height: 50vh;
+  width: auto;
 }
 
-
-
-nav {
+.header-nav {
   display: flex;
-  background-color: rgb(215, 22, 22);
-  height: 60px;
-  z-index: 10;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  height: 70px;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  opacity: 0.6;
 }
+.cname{
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-left: 35px;
+  margin-bottom: 0;
+}
+.banner-text {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  height: 140px;
+}
+.hero-banner {
+  position: absolute;
+  /* height: 100vh; */
+  z-index: 1;
+}
+.banner-text {
+  width: 280px;
+  z-index: 2;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+.sr-only {
+  display: none;
+}
+.bi-linkedin {
+  height: 50px;
+  width: 50px;
+  fill: rgb(71, 122, 241);
+}
+.bi-github {
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  fill: rgb(88, 86, 86);
+}
+.social-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 60px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
 .nav-item {
   width: 20px;
 }
@@ -58,11 +124,7 @@ nav {
   display: flex;
   flex-direction: row;
   list-style: none;
-  /* flex-wrap: nowrap; */
-  /* justify-content: space-evenly; */
   align-items: center;
-  /* width: 100px; */
-  /* margin: 20px; */
 }
 
 /* ----------->CSS styles for CONTACT page<-------- */
@@ -118,5 +180,12 @@ label[for="phone"]::before {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-areas: ; */
+  }
+}
+
+@media (max-width: 576px) {
+  .bi-linkedin,
+  .bi-github {
+    display: none;
   }
 }
