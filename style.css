@@ -5,7 +5,7 @@
   --header-font-weight: 800;
   --header-color: rgba(48, 114, 236, 0.974);
   --font-color: #020269;
-  --btn-hover:darkorange;
+  --btn-hover: darkorange;
 
   /* variables for burger menu */
   --bar-with: 30px;
@@ -16,7 +16,6 @@
   --animation-timing: 200ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
-
 
 /* remove html and body default sizes, 
 and assign global properties */
@@ -50,7 +49,6 @@ h1 {
 
 /* ------>home page layout ENDS here<-------- */
 
-
 /* -------> burgerMenu START ⬇️⬇️⬇️⬇️<------- */
 .hamburger-menu {
   --x-width: calc(var(--hamburger-height) * 1.41421356237);
@@ -65,9 +63,9 @@ h1 {
   z-index: 10;
   cursor: pointer;
 }
-.hamburger-menu:has(input:checked){
-  --background:var(--font-color);
-  --foreground:var(--background)
+.hamburger-menu:has(input:checked) {
+  --background: var(--font-color);
+  --foreground: var(--background);
 }
 
 .hamburger-menu::before,
@@ -82,7 +80,6 @@ h1 {
   transition: opacity var(--animation-timing), width var(--animation-timing),
     rotate var(--animation-timing), translate var(--animation-timing),
     background-color var(--animation-timing);
-    
 }
 .hamburger-menu input {
   appearance: none;
@@ -107,7 +104,7 @@ h1 {
   width: 0;
 }
 
-.sidebar{
+.sidebar {
   transition: translate var(--animation-timing);
   translate: -100%;
   padding: 0.5rem 1rem;
@@ -118,45 +115,37 @@ h1 {
   height: 100vh;
 }
 
-.hamburger-menu:has(input:checked) + .sidebar{
+.hamburger-menu:has(input:checked) + .sidebar {
   translate: 0;
 }
-.burger-nav{
+.burger-nav {
   padding: 100px;
-
 }
-.burger-nav a{
+.burger-nav a {
   color: var(--font-color);
-   font-size: 2rem;
-   font-weight: var(--header-font-weight);
- 
-    
+  font-size: 2rem;
+  font-weight: var(--header-font-weight);
 }
-.burger-nav a:hover{
+.burger-nav a:hover {
   color: var(--btn-hover);
-
 }
-.burgerMenu{
+.burgerMenu {
   position: absolute;
 }
-.burgerMenu .hamburger-menu:has(input:checked) + .sidebar{
+.burgerMenu .hamburger-menu:has(input:checked) + .sidebar {
   /* background-color: var(--background); */
   background-color: #f7e2c7;
- 
 }
-.burgerMenu .hamburger-menu:has(input:checked){
+.burgerMenu .hamburger-menu:has(input:checked) {
   position: fixed;
 }
-.burgerMenu .hamburger-menu{
-  position: fixed;
-}
-.burgerMenu{
+
+.burgerMenu {
   position: fixed;
   z-index: 100;
 }
 
 /* -------> burgerMenu END ⬆️⬆️⬆️⬆️ <------- */
-
 
 /* -------->styles for HEADER and NAV STARTS here ⬇️⬇️⬇️⬇️<-------- */
 header {
@@ -177,12 +166,11 @@ header {
   align-items: center;
   height: 70px;
   justify-content: space-around;
-  background-color: whitesmoke;
+  background-color: #dadee4;
   opacity: 0.9;
   position: fixed;
   top: 0;
   z-index: 8;
-  
 }
 .cname {
   position: absolute;
@@ -252,44 +240,53 @@ header {
   list-style: none;
   align-items: center;
 }
-.contact-item-email::before{
-  content: '📩';
+.contact-item-email::before {
+  content: "📩";
 }
-.contact-item-phone::before{
-  content: '📞';
+.contact-item-phone::before {
+  content: "📞";
 }
 
 /* -------->styles for HEADER and NAV ENDS here ⬆️⬆️⬆️⬆️<-------- */
 
 /* -------->styles for ABOUT page STARTS here ⬇️⬇️⬇️⬇️<-------- */
-#about>.about-text{
+#about > .about-text {
   text-align: center;
   padding: 10px;
   margin-top: 20px;
   text-indent: 0;
 }
-#about>.title{
+#about > .title {
   display: none;
 }
-#about>h2{
+#about > h2 {
   text-align: center;
   margin-top: 20px;
 }
-#about>p{
+#about > p {
   text-indent: 40px;
   text-align: justify;
   padding: 10px;
-
 }
 
 /* -------->styles for ABOUT page ENDS here ⬆️⬆️⬆️⬆️<-------- */
 
 /* ----------->CSS styles for SERVICES page STARTS here ⬇️⬇️⬇️⬇️<-------- */
 
+/* -------->styles for SERVICES page ENDS here ⬆️⬆️⬆️⬆️<-------- */
 
 
+/* ----------->CSS styles for REVIEWS page STARTS here ⬇️⬇️⬇️⬇️<-------- */
+#reviews{
+  z-index: 100;
+}
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
-/* -------->styles for ABOUT page ENDS here ⬆️⬆️⬆️⬆️<-------- */
+/* -------->styles for REVIEWS page ENDS here ⬆️⬆️⬆️⬆️<-------- */
 
 
 /* ----------->CSS styles for CONTACT page ⬇️⬇️⬇️⬇️<-------- */
@@ -299,7 +296,7 @@ header {
   padding: 0 15px 0 15px;
   flex-wrap: nowrap;
   flex-direction: column;
-  z-index: 10;
+  z-index: 100;
 }
 #contact > .title {
   text-align: center;
@@ -338,8 +335,6 @@ label[for="phone"]::before {
 }
 /* ----------->CSS styles for CONTACT page ⬆️⬆️⬆️⬆️<-------- */
 
-
-
 /*add media queries for web responsiveness to different viewport */
 
 @media (min-width: 768px) {
@@ -350,17 +345,19 @@ label[for="phone"]::before {
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-areas: ; */
   }
-  .burgerMenu{
+  .burgerMenu,
+  .review-link{
     display: none;
   }
+
 }
 
 @media (max-width: 576px) {
   .bi-linkedin,
   .bi-github,
   .header-contact,
-  .nav-menu {
+  .nav-menu,
+  .card-review{
     display: none;
   }
-
 }
