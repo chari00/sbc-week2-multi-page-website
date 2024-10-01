@@ -451,6 +451,9 @@ footer a:hover{
 /*add media queries for web responsiveness to different viewport */
 
 @media (min-width: 768px) and (max-width:1400px) {
+  body{
+    max-width: 1400px;
+  }
   main{
     max-width: 1200px;
   }
