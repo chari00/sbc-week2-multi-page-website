@@ -82,6 +82,7 @@ h1 {
   transition: opacity var(--animation-timing), width var(--animation-timing),
     rotate var(--animation-timing), translate var(--animation-timing),
     background-color var(--animation-timing);
+    
 }
 .hamburger-menu input {
   appearance: none;
@@ -122,10 +123,14 @@ h1 {
 }
 .burger-nav{
   padding: 100px;
+
 }
 .burger-nav a{
+  color: var(--font-color);
    font-size: 2rem;
-   font-weight: var(--header-font-weight)
+   font-weight: var(--header-font-weight);
+ 
+    
 }
 .burger-nav a:hover{
   color: var(--btn-hover);
@@ -133,11 +138,23 @@ h1 {
 }
 .burgerMenu{
   position: absolute;
-  z-index: 10;
 }
 .burgerMenu .hamburger-menu:has(input:checked) + .sidebar{
-  background-color: var(--background);
+  /* background-color: var(--background); */
+  background-color: #f7e2c7;
+ 
 }
+.burgerMenu .hamburger-menu:has(input:checked){
+  position: fixed;
+}
+.burgerMenu .hamburger-menu{
+  position: fixed;
+}
+.burgerMenu{
+  position: fixed;
+  z-index: 100;
+}
+
 /* -------> burgerMenu END ⬆️⬆️⬆️⬆️ <------- */
 
 
@@ -161,12 +178,16 @@ header {
   height: 70px;
   justify-content: space-around;
   background-color: whitesmoke;
-  opacity: 0.8;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  z-index: 8;
+  
 }
 .cname {
   position: absolute;
   font-weight: 900;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 15px;
   margin-left: 45px;
   margin-bottom: 0;
