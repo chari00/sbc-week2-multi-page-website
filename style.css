@@ -279,6 +279,7 @@ header {
 /* ----------->CSS styles for SERVICES page STARTS here ⬇️⬇️⬇️⬇️<-------- */
 
 #services{
+  overflow-x: hidden;
   background-color: var(--section-bg);
   z-index: 100;
 }
