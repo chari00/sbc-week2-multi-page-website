@@ -6,6 +6,7 @@
   --header-color: rgba(48, 114, 236, 0.974);
   --font-color: #020269;
   --btn-hover: darkorange;
+  --section-bg:#bae4eb5c;
 
   /* variables for burger menu */
   --bar-with: 30px;
@@ -273,17 +274,53 @@ header {
 
 /* ----------->CSS styles for SERVICES page STARTS here ⬇️⬇️⬇️⬇️<-------- */
 
-/* -------->styles for SERVICES page ENDS here ⬆️⬆️⬆️⬆️<-------- */
+#services{
+  background-color: var(--section-bg);
+  z-index: 100;
+}
+#services > .title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.services-container{
+  padding: 10px;
+}
+.carousel-inner img{
+  border-radius: 10px;
+}
+.service-link{
+  font-size: 1rem;
+  font-weight: 600;
+  padding-left: 30%;
+  
+}
 
+.service-link:hover{
+  color: var(--btn-hover);
+}
+/* -------->styles for SERVICES page ENDS here ⬆️⬆️⬆️⬆️<-------- */
 
 /* ----------->CSS styles for REVIEWS page STARTS here ⬇️⬇️⬇️⬇️<-------- */
 #reviews{
+  background-color: #bae4eb5c;
   z-index: 100;
+}
+#reviews > .title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .reviews-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+.reviews-container .card{
+  margin-bottom: 15px;
+}
+.review-link:hover{
+  color: var(--btn-hover);
 }
 
 /* -------->styles for REVIEWS page ENDS here ⬆️⬆️⬆️⬆️<-------- */
@@ -292,6 +329,7 @@ header {
 /* ----------->CSS styles for CONTACT page ⬇️⬇️⬇️⬇️<-------- */
 
 #contact {
+  background-color: var(--section-bg);
   display: flex;
   padding: 0 15px 0 15px;
   flex-wrap: nowrap;
