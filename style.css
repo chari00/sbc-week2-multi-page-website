@@ -451,12 +451,12 @@ footer a:hover{
 /*add media queries for web responsiveness to different viewport */
 
 @media (min-width: 768px) and (max-width:1400px) {
-  body{
+  /* body{
     max-width: 1400px;
-  }
-  main{
+  } */
+  /* main{
     max-width: 1200px;
-  }
+  } */
   
   .burgerMenu,
   .review-link{
@@ -475,8 +475,7 @@ footer a:hover{
     justify-content: end;
   }
   .social-list {
-  
-    width: 75px;
+      width: 75px;
     margin-right: 40px;
     margin-bottom: 10px;
   }
@@ -486,6 +485,8 @@ footer a:hover{
     margin: 0;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
+
 
   }
 
@@ -553,6 +554,79 @@ footer a:hover{
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1400px) {
   
+  main{
+    max-width: 1200px;
+  }
+  /* .bi-linkedin, */
+  /* .bi-github, */
+  /* .header-contact, */
+  .burgerMenu,
+  .review-link{
+    display: none;
+  }
+  .socials-icons{
+    display: flex;
+    justify-content: end;
+  }
+  .bi-linkedin,
+  .bi-github{
+    height: 40px;
+    width: 40px;
+  }
+  .header-nav {
+    height: 90px;
+  }
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+  }
+  .header-contact{
+    display: flex;
+    justify-content: end;
+  }
+  .social-list {
+    width: 75px;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+  }
+  .nav-menu {
+    position: fixed;
+    background-color: #2a8bec;
+    height: 35px;
+    margin-top: 90px;
+    text-shadow: 1px 1px 2px var(--background);
+    /* z-index: 101; */
+}
+.nav-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.nav-item a{
+  color: var(--font-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-list .nav-item:last-child a {
+  margin-left: 20px;
+}
+
+.nav-item {
+  width: 85px;
+}
+ 
 }
