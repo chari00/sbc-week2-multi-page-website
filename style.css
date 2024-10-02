@@ -6,8 +6,8 @@
   --header-color: rgba(48, 114, 236, 0.974);
   --font-color: #020269;
   --btn-hover: darkorange;
-  --section-bg:#bae4eb5c;
-  --text-shadow:1px 1px 2px #2a8bec;
+  --section-bg: #bae4eb5c;
+  --text-shadow: 1px 1px 2px #2a8bec;
 
   /* variables for burger menu */
   --bar-with: 30px;
@@ -185,22 +185,26 @@ header {
   margin-left: 45px;
   margin-bottom: 0;
   text-shadow: 1px 1px 2px var(--background);
-
 }
-.banner-text {
+/* .banner-text {
   position: absolute;
   bottom: 50px;
   left: 10px;
+  width: 280px;
   height: 140px;
+} */
+
+.banner-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 300px;
+  height: 175px;
 }
 .hero-banner {
   position: absolute;
   /* width: 100vw; */
   z-index: 1;
-}
-.banner-text {
-  width: 280px;
-  z-index: 2;
 }
 
 .logo {
@@ -212,13 +216,13 @@ header {
   display: none;
 }
 .bi-linkedin {
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   fill: rgb(71, 122, 241);
 }
 .bi-github {
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   /* margin-left: 10px; */
   fill: rgb(88, 86, 86);
 }
@@ -280,7 +284,7 @@ header {
 
 /* ----------->CSS styles for SERVICES page STARTS here ⬇️⬇️⬇️⬇️<-------- */
 
-#services{
+#services {
   overflow-x: hidden;
   background-color: var(--section-bg);
   z-index: 100;
@@ -290,26 +294,30 @@ header {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.services-container{
+.services-container {
   padding: 10px;
 }
-.carousel-inner img{
+.carousel-inner img {
   border-radius: 10px;
 }
-.service-link{
+.service-link {
   font-size: 1rem;
   font-weight: 600;
   padding-left: 30%;
-  
 }
 
-.service-link:hover{
+.service-link:hover {
   color: var(--btn-hover);
 }
+
+.carousel-inner p {
+  color: var(--background);
+}
+
 /* -------->styles for SERVICES page ENDS here ⬆️⬆️⬆️⬆️<-------- */
 
 /* ----------->CSS styles for REVIEWS page STARTS here ⬇️⬇️⬇️⬇️<-------- */
-#reviews{
+#reviews {
   background-color: #bae4eb5c;
   z-index: 100;
 }
@@ -323,15 +331,14 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.reviews-container .card{
+.reviews-container .card {
   margin-bottom: 15px;
 }
-.review-link:hover{
+.review-link:hover {
   color: var(--btn-hover);
 }
 
 /* -------->styles for REVIEWS page ENDS here ⬆️⬆️⬆️⬆️<-------- */
-
 
 /* ----------->CSS styles for CONTACT page ⬇️⬇️⬇️⬇️<-------- */
 
@@ -380,24 +387,20 @@ label[for="phone"]::before {
 }
 /* ----------->CSS styles for CONTACT page END ⬆️⬆️⬆️⬆️<-------- */
 
-
-
-
 /* ----------->CSS styles for FOOTER  START ⬇️⬇️⬇️⬇️<-------- */
-footer{
- background-color: var(--background);
- z-index: 100;
+footer {
+  background-color: var(--background);
+  z-index: 100;
 }
-footer h3{
+footer h3 {
   color: var(--font-color);
   text-shadow: var(--text-shadow);
   text-align: center;
   font-weight: 600;
-  margin-top: 20px;
-
-  
+  font-size: 1rem;
+  margin-top: 10px;
 }
-.footer-contact-list{
+.footer-contact-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -407,58 +410,87 @@ footer h3{
   padding: 0;
 }
 
-footer a:hover{
+footer a:hover {
   color: var(--btn-hover);
 }
-.socials-icons{
+footer .socials-icons {
   display: flex;
-  height: 40px;
+  justify-content: center;
+  /* height: 40px; */
   /* width: 40px; */
   /* background-color: rgb(233, 207, 207); */
-  /* margin: auto; */
-  
+  margin: auto;
 }
 
-.footer-social-list{
+.footer-social-list {
   display: flex;
   flex-direction: row;
   list-style: none;
   width: 55px;
   padding: 0;
-
 }
 
-.footer-social-link{
+.footer-social-link {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   width: 40px;
-  
 }
 
-.find-us{
+.find-us {
   text-align: center;
 }
-.copyright{
+.copyright {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-
 /* -------->styles for FOOTER ENDS here ⬆️⬆️⬆️⬆️<-------- */
-
-
-
 
 /*add media queries for web responsiveness to different viewport */
 
-@media (min-width: 768px) and (max-width:1400px) {
- 
-  
+@media (min-width: 768px) and (max-width: 1400px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "services reviews"
+      "contact map";
+    height: 100vh;
+  }
+  #services {
+    grid-area: services;
+  }
+  #reviews {
+    grid-area: reviews;
+  }
+  #contact {
+    grid-area: contact;
+  }
+  .map {
+    grid-area: map;
+    width: 100%;
+    background-color: var(--section-bg);
+  }
+  .map-container {
+    margin: auto;
+    padding: auto;
+  }
+  .about-text {
+    display: none;
+  }
+  #services,
+  #reviews,
+  #contact,
+  .map {
+    height: 100%;
+  }
+
   .burgerMenu,
-  .review-link{
+  .review-link {
     display: none;
   }
   .logo {
@@ -469,16 +501,15 @@ footer a:hover{
   .header-nav {
     height: 80px;
   }
-  h1 .title{
-  text-shadow: 1px 1px 2px var(--background);
-
+  h1 .title {
+    text-shadow: 1px 1px 2px var(--background);
   }
-  .socials-icons{
+  .socials-icons {
     display: flex;
     justify-content: end;
   }
   .social-list {
-      width: 75px;
+    width: 75px;
     margin-right: 40px;
     margin-bottom: 10px;
   }
@@ -489,25 +520,23 @@ footer a:hover{
     flex-direction: row;
     justify-content: center;
     align-content: center;
-
-
   }
 
-  .nav-item a{
+  .nav-item a {
     color: var(--font-color);
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
   }
-  
+
   .nav-list .nav-item:last-child a {
     margin-left: 20px;
   }
-  
+
   .nav-item {
     width: 85px;
   }
-    
+
   .nav-menu {
     position: fixed;
     background-color: #2a8bec;
@@ -515,15 +544,16 @@ footer a:hover{
     margin-top: 80px;
     text-shadow: 1px 1px 2px var(--background);
     z-index: 101;
-}
-.banner-text{
-  margin-left: 80px;
-  height: 180px;
-  width: 300px;
-}
+  }
+
+  .banner-text {
+    margin-left: 15px;
+    height: 200px;
+    width: 480px;
+  }
 
   .bi-linkedin,
-  .bi-github{
+  .bi-github {
     height: 30px;
     width: 30px;
   }
@@ -535,7 +565,7 @@ footer a:hover{
     flex-direction: row;
     width: 200px;
   }
-  .header-contact{
+  .header-contact {
     display: flex;
     justify-content: end;
   }
@@ -544,70 +574,109 @@ footer a:hover{
     font-size: 1.2rem;
     padding: 40px;
   }
-  footer{
+  footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    'contact follow find' 
-    'copyright copyright copyright';
-    height: 200px;
-
+    grid-template-areas:
+      "contact follow find"
+      "copyright copyright copyright";
+    height: 155px;
   }
-.contact-us{
-  grid-area: contact;
-}
-.follow-us{
-  grid-area: follow;
-}
-.find-us{
-  grid-area: find;
-}
-.copyright{
-  grid-area: copyright;
-}
-
+  .card {
+    width: 400px;
+  }
+  .contact-us {
+    grid-area: contact;
+  }
+  .follow-us {
+    grid-area: follow;
+  }
+  .find-us {
+    grid-area: find;
+  }
+  .copyright {
+    grid-area: copyright;
+  }
 }
 
 @media (max-width: 767px) {
-  .bi-linkedin,
-  .bi-github,
+  header .bi-linkedin,
+  header .bi-github,
   .header-contact,
   .nav-menu,
-  .card-review{
+  .card-review {
     display: none;
   }
 }
 
 @media (min-width: 1400px) {
-  
-  main{
+  main {
     max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "services reviews"
+      "contact map";
+    height: 100vh;
   }
-  .cname{
+  #services {
+    grid-area: services;
+  }
+  #reviews {
+    grid-area: reviews;
+  }
+  #contact {
+    grid-area: contact;
+  }
+  .map {
+    grid-area: map;
+    width: 100%;
+    background-color: var(--section-bg);
+  }
+  .map-container {
+    margin: auto;
+    padding: auto;
+  }
+  .about-text {
+    display: none;
+  }
+  #services,
+  #reviews,
+  #contact,
+  .map {
+    height: 100%;
+  }
+  .cname {
     text-shadow: 1px 1px 2px var(--background);
     font-size: 1.3rem;
     margin-left: 130px;
-
   }
   .logo {
     height: 70px;
     width: 70px;
     margin-left: 40px;
-}
+  }
+  .banner-text {
+    margin-left: 80px;
+    height: 250px;
+    width: 570px;
+  }
 
   .burgerMenu,
-  .review-link{
+  .review-link {
     display: none;
   }
-  .socials-icons{
+  .socials-icons {
     display: flex;
     justify-content: end;
   }
   .bi-linkedin,
-  .bi-github{
-    height: 40px;
-    width: 40px;
+  .bi-github {
+    height: 50px;
+    width: 50px;
+    gap: 10px;
   }
   .header-nav {
     height: 90px;
@@ -620,7 +689,7 @@ footer a:hover{
     flex-direction: row;
     width: 200px;
   }
-  .header-contact{
+  .header-contact {
     display: flex;
     justify-content: end;
   }
@@ -637,51 +706,49 @@ footer a:hover{
     margin-top: 90px;
     text-shadow: 1px 1px 2px var(--background);
     /* z-index: 101; */
-}
-.nav-list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  }
+  .nav-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
 
-}
+  .nav-item a {
+    color: var(--font-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
 
-.nav-item a{
-  color: var(--font-color);
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-decoration: none;
-}
+  .nav-list .nav-item:last-child a {
+    margin-left: 20px;
+  }
 
-.nav-list .nav-item:last-child a {
-  margin-left: 20px;
-}
-
-.nav-item {
-  width: 85px;
-}
-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-  'contact follow find'
-  'copyright copyright copyright';
-  height: 200px;
-}
-.contact-us{
-  grid-area: contact;
-}
-.follow-us{
-  grid-area: follow;
-}
-.find-us{
-  grid-area: find;
-}
-.copyright{
-  grid-area: copyright;
-}
- 
+  .nav-item {
+    width: 85px;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "contact follow find"
+      "copyright copyright copyright";
+    height: 150px;
+  }
+  .contact-us {
+    grid-area: contact;
+  }
+  .follow-us {
+    grid-area: follow;
+  }
+  .find-us {
+    grid-area: find;
+  }
+  .copyright {
+    grid-area: copyright;
+  }
 }
