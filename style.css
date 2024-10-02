@@ -184,6 +184,8 @@ header {
   padding: 15px;
   margin-left: 45px;
   margin-bottom: 0;
+  text-shadow: 1px 1px 2px var(--background);
+
 }
 .banner-text {
   position: absolute;
@@ -217,7 +219,7 @@ header {
 .bi-github {
   height: 50px;
   width: 50px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   fill: rgb(88, 86, 86);
 }
 .social-list {
@@ -408,20 +410,21 @@ footer h3{
 footer a:hover{
   color: var(--btn-hover);
 }
-#social-icon{
+.socials-icons{
   display: flex;
   height: 40px;
+  /* width: 40px; */
+  /* background-color: rgb(233, 207, 207); */
+  /* margin: auto; */
   
 }
 
 .footer-social-list{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   list-style: none;
-  gap: 10px;
+  width: 55px;
   padding: 0;
-
-  
 
 }
 
@@ -430,6 +433,7 @@ footer a:hover{
   justify-content: center;
   align-items: center;
   list-style: none;
+  width: 40px;
   
 }
 
@@ -451,12 +455,7 @@ footer a:hover{
 /*add media queries for web responsiveness to different viewport */
 
 @media (min-width: 768px) and (max-width:1400px) {
-  /* body{
-    max-width: 1400px;
-  } */
-  /* main{
-    max-width: 1200px;
-  } */
+ 
   
   .burgerMenu,
   .review-link{
@@ -469,6 +468,10 @@ footer a:hover{
   }
   .header-nav {
     height: 80px;
+  }
+  h1 .title{
+  text-shadow: 1px 1px 2px var(--background);
+
   }
   .socials-icons{
     display: flex;
@@ -537,10 +540,32 @@ footer a:hover{
     justify-content: end;
   }
   .cname {
+    text-shadow: 1px 1px 2px var(--background);
     font-size: 1.2rem;
     padding: 40px;
   }
+  footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'contact follow find' 
+    'copyright copyright copyright';
+    height: 200px;
 
+  }
+.contact-us{
+  grid-area: contact;
+}
+.follow-us{
+  grid-area: follow;
+}
+.find-us{
+  grid-area: find;
+}
+.copyright{
+  grid-area: copyright;
+}
 
 }
 
@@ -559,9 +584,18 @@ footer a:hover{
   main{
     max-width: 1200px;
   }
-  /* .bi-linkedin, */
-  /* .bi-github, */
-  /* .header-contact, */
+  .cname{
+    text-shadow: 1px 1px 2px var(--background);
+    font-size: 1.3rem;
+    margin-left: 130px;
+
+  }
+  .logo {
+    height: 70px;
+    width: 70px;
+    margin-left: 40px;
+}
+
   .burgerMenu,
   .review-link{
     display: none;
@@ -627,6 +661,27 @@ footer a:hover{
 
 .nav-item {
   width: 85px;
+}
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  'contact follow find'
+  'copyright copyright copyright';
+  height: 200px;
+}
+.contact-us{
+  grid-area: contact;
+}
+.follow-us{
+  grid-area: follow;
+}
+.find-us{
+  grid-area: find;
+}
+.copyright{
+  grid-area: copyright;
 }
  
 }
