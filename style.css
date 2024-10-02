@@ -48,6 +48,8 @@ body {
 main {
   display: grid;
   height: 100%;
+  overflow: hidden;
+
 
 }
 h1 {
