@@ -154,8 +154,8 @@ h1 {
 }
 
 .burgerMenu {
-  position: fixed;
   z-index: 100;
+  /* position: fixed; */
 }
 
 /* -------> burgerMenu END ⬆️⬆️⬆️⬆️ <------- */
