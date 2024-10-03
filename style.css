@@ -49,8 +49,6 @@ main {
   display: grid;
   height: 100%;
   overflow: hidden;
-
-
 }
 h1 {
   color: var(--header-color);
@@ -74,10 +72,10 @@ h1 {
   z-index: 10;
   cursor: pointer;
 }
-.hamburger-menu:has(input:checked) {
+/* .hamburger-menu:has(input:checked) {
   --background: var(--font-color);
   --foreground: var(--background);
-}
+} */
 
 .hamburger-menu::before,
 .hamburger-menu::after,
@@ -99,6 +97,13 @@ h1 {
   outline: none;
   pointer-events: none;
 }
+.burgerMenu {
+  position: absolute;
+  /* pointer-events: none; */
+  translate: 0;
+  /* width: 0; */
+}
+
 .hamburger-menu:has(input:checked)::before {
   rotate: 45deg;
   width: var(--x-width);
@@ -126,9 +131,6 @@ h1 {
   height: 100vh;
 }
 
-.hamburger-menu:has(input:checked) + .sidebar {
-  translate: 0;
-}
 .burger-nav {
   padding: 100px;
 }
@@ -140,8 +142,9 @@ h1 {
 .burger-nav a:hover {
   color: var(--btn-hover);
 }
-.burgerMenu {
-  position: absolute;
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
 }
 .burgerMenu .hamburger-menu:has(input:checked) + .sidebar {
   background-color: #f7e2c7;
@@ -180,7 +183,7 @@ header {
   opacity: 0.9;
   position: fixed;
   top: 0;
-  z-index: 8;
+  z-index: 2;
 }
 .cname {
   position: absolute;
@@ -192,7 +195,6 @@ header {
   text-shadow: 1px 1px 2px var(--background);
 }
 
-
 .banner-text {
   position: absolute;
   bottom: 30px;
@@ -203,7 +205,7 @@ header {
 .hero-banner {
   position: absolute;
   /* width: 100vw; */
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .logo {
@@ -284,9 +286,9 @@ header {
 /* ----------->CSS styles for SERVICES page STARTS here ⬇️⬇️⬇️⬇️<-------- */
 
 #services {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   background-color: var(--section-bg);
-  z-index: 100;
+  /* z-index: 100; */
 }
 #services > .title {
   text-align: center;
@@ -318,7 +320,7 @@ header {
 /* ----------->CSS styles for REVIEWS page STARTS here ⬇️⬇️⬇️⬇️<-------- */
 #reviews {
   background-color: #bae4eb5c;
-  z-index: 100;
+  /* z-index: 100; */
 }
 #reviews > .title {
   text-align: center;
@@ -347,7 +349,7 @@ header {
   padding: 0 15px 0 15px;
   flex-wrap: nowrap;
   flex-direction: column;
-  z-index: 100;
+  /* z-index: 100; */
 }
 #contact > .title {
   text-align: center;
@@ -389,7 +391,7 @@ label[for="phone"]::before {
 /* ----------->CSS styles for FOOTER  START ⬇️⬇️⬇️⬇️<-------- */
 footer {
   background-color: var(--background);
-  z-index: 100;
+  /* z-index: 100; */
 }
 footer h3 {
   color: var(--font-color);
@@ -442,8 +444,8 @@ footer .socials-icons {
   justify-content: center;
   text-align: center;
 }
-.divider{
-  border: 2px solid var(--font-color);
+.divider {
+  border: 2px solid var(--header-color);
 }
 
 /* -------->styles for FOOTER ENDS here ⬆️⬆️⬆️⬆️<-------- */
@@ -459,7 +461,7 @@ footer .socials-icons {
       "services reviews"
       "contact map";
   }
- 
+
   #services {
     grid-area: services;
   }
@@ -499,6 +501,7 @@ footer .socials-icons {
   }
   .header-nav {
     height: 80px;
+    /* z-index: 10; */
   }
   h1 .title {
     text-shadow: 1px 1px 2px var(--background);
@@ -527,6 +530,9 @@ footer .socials-icons {
     font-weight: 700;
     text-decoration: none;
   }
+  .nav-item a:hover {
+    color: var(--btn-hover);
+  }
 
   .nav-list .nav-item:last-child a {
     margin-left: 20px;
@@ -542,7 +548,7 @@ footer .socials-icons {
     height: 32px;
     margin-top: 80px;
     text-shadow: 1px 1px 2px var(--background);
-    z-index: 101;
+    z-index: 1;
   }
 
   .banner-text {
@@ -582,9 +588,7 @@ footer .socials-icons {
       "copyright copyright copyright";
     height: 155px;
   }
-  /* .card {
-    width: 300px;
-  } */
+
   .contact-us {
     grid-area: contact;
   }
@@ -597,9 +601,19 @@ footer .socials-icons {
   .copyright {
     grid-area: copyright;
   }
-}
-#reviews .reviews-container .card:nth-last-child(-n+2) {
-  display: none;
+  /* #reviews .reviews-container .card:nth-last-child(-n+2) {
+    display: none;
+  } */
+  .social-contact-container {
+    z-index: 1;
+  }
+  .reviews-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -611,24 +625,29 @@ footer .socials-icons {
     display: none;
   }
 }
+/* @media (min-width:800px) and (max-width:1200px) {
+   .card {
+    width: 300px;
+  }
+  
+} */
 
 @media (min-width: 1400px) {
   main,
   #about,
   #services,
   #contact,
-  #reviews{
+  #reviews {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     margin: auto;
+  }
 
-  }
- 
-  #reviews .reviews-container .card:nth-last-child(-n+2) {
+  /* #reviews .reviews-container .card:nth-last-child(-n+2) {
     display: block;
-  }
+  } */
   #services {
     grid-area: services;
   }
@@ -680,6 +699,7 @@ footer .socials-icons {
     display: flex;
     justify-content: end;
   }
+
   .bi-linkedin,
   .bi-github {
     height: 50px;
@@ -713,8 +733,9 @@ footer .socials-icons {
     height: 35px;
     margin-top: 90px;
     text-shadow: 1px 1px 2px var(--background);
-    /* z-index: 101; */
+    z-index: 1;
   }
+
   .nav-list {
     display: flex;
     padding: 0;
@@ -722,6 +743,9 @@ footer .socials-icons {
     flex-direction: row;
     justify-content: center;
     align-content: center;
+  }
+  .nav-item a:hover {
+    color: var(--btn-hover);
   }
 
   .nav-item a {
@@ -737,6 +761,17 @@ footer .socials-icons {
 
   .nav-item {
     width: 85px;
+  }
+
+  .social-contact-container {
+    z-index: 1;
+  }
+  .reviews-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
   }
   footer {
     display: grid;
